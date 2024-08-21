@@ -1,4 +1,4 @@
-import 'package:d4_dart_packages_library/dart_packages_library.dart';
+import 'package:dart_packages_library/dart_packages_library.dart';
 import 'package:test/test.dart';
 
 void main() {
