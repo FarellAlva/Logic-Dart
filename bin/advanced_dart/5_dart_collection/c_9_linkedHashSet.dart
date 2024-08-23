@@ -19,20 +19,23 @@ void main() {
 
   set
     ..add('farel')
-    ..add('alvaro');
+    ..add('alvaro')
+    ..add('theriono');
 
-  print(set);
+  print(set); //{farel, alvaro, theriono} berarturan
 }
 
-class Node<T> {
-  T data;
-  Node<T>? next;
-  Node<T>? prev;
 
-  Node(this.data);
-}
 
 //IMPLEMENTASI SESUNGGUHNYA dengan double linked list didart
+
+// class Node<T> {
+//   T data;
+//   Node<T>? next;
+//   Node<T>? prev;
+
+//   Node(this.data);
+// }
 // class DoublyLinkedList<T> {
 //   Node<T>? head;
 //   Node<T>? tail;
