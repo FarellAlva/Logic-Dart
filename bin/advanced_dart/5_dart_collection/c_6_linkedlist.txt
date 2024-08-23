@@ -1,0 +1,17 @@
+list vs linked List
+
+1. Tambah data
+List= cepat jika kapasitas array masih cukup, lambat jika sudah penuh
+linked list= cepat karena hanya menambah node di akhir
+
+2. Ambil data
+list= cepat karena tinggal gunakan index array
+linked list= lambat karena harus di cek dari node awal sampai ketemu indexnya
+
+3. ubah data
+list= cepat karena tinggal gunakan index array
+array= lambat karena harus di cek dari node awal sampai ketemu
+
+4. hapus data
+list= lambat kakrena harus menggeser data di belakanga yang dihapus
+linked list= cepat karena tinggal ubah prev dan next di node sebelah yang dihapus
