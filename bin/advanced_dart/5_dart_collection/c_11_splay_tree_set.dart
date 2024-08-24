@@ -6,7 +6,7 @@ import 'dart:collection';
 void main() {
   final treeSet = SplayTreeSet<dynamic>();
 
-  treeSet.addAll([1, 2, 4, 2, 5, 3, 5]);
+  treeSet.addAll([6, 2, 4, 2, 5, 3, 5]);
 
   print(treeSet); //{1,2,3,4,5}
 }

@@ -1,0 +1,27 @@
+Dalam Dart, beberapa struktur data menggunakan linked list atau struktur data yang mirip dengan linked list untuk pengelolaan elemen-elemen internalnya. Berikut adalah beberapa contoh:
+
+1. Set
+Default Implementation: Set secara default diimplementasikan sebagai LinkedHashSet.
+Struktur Data: LinkedHashSet menggunakan double linked list untuk menjaga urutan elemen berdasarkan urutan penambahannya.
+2. Map
+Default Implementation: Map di Dart secara default diimplementasikan sebagai LinkedHashMap.
+Struktur Data: LinkedHashMap juga menggunakan double linked list untuk menjaga urutan kunci berdasarkan urutan penambahannya.
+3. Queue
+Default Implementation: Queue di Dart diimplementasikan menggunakan ListQueue atau LinkedList.
+Struktur Data:
+Jika menggunakan ListQueue, ini diimplementasikan menggunakan growable list (bukan linked list).
+Jika menggunakan LinkedList, ini bisa menjadi double linked list atau single linked list tergantung pada implementasi.
+
+
+//perlu dicatat
+
+di dart, sejatinya tidak ada linkedlist secara utuh (mengarah ke satu node)
+developer dart mengguanakn implementasi dua arah (double linked list) 
+untuk setiap pemakaian kata linked list
+
+// Ringkasan
+//splay tree dia urutin data nya dari besar ke kecil ketika ditampilkan
+// Literal {}: Secara default membuat LinkedHashMap. Ini menjaga urutan elemen.
+// LinkedHashMap Konstruktor: Membuat LinkedHashMap secara eksplisit.
+// HashMap Konstruktor: Membuat HashMap secara eksplisit, yang tidak menjaga urutan elemen.
+// Jadi, literal {} memang digunakan untuk LinkedHashMap secara default, sedangkan untuk HashMap dan LinkedHashMap secara eksplisit, Anda perlu menggunakan konstruktor dari dart:collection.
