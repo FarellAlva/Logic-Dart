@@ -34,5 +34,6 @@ void main() {
   treeSet.add(Category('1', 'Category 1'));
   treeSet.add(Category('2', 'Category 2'));
 
-  print(treeSet);
+  print(
+      treeSet); //{Category{id: 1, name: Category 1}, Category{id: 2, name: Category 2}, Category{id: 3, name: Category 3}}
 }
