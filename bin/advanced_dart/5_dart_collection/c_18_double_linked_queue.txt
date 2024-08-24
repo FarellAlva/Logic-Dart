@@ -1,0 +1,7 @@
+//double linked queue
+double linked queue merupakan implementasi dari queue dengan 
+struktur data Double linked list
+
+sebenarnya penggunaan double linked queue sangat cocok untuk queue,
+karena struktur data double linked list sangat cepat untuk modifikasi data di awal dan akhir, 
+sehingga cocok untuk queue ataupun stack
