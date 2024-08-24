@@ -1,0 +1,5 @@
+//iterable method
+
+//di dalam kelas iterable, sudah banyak method yang tersedia untuk bisa 
+//digunakan ketika butuh melakukan operasi terhadap data collection
+ //https://api.dart.dev/stable/3.5.1/dart-collection/dart-collection-library.html
