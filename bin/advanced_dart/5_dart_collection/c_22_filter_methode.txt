@@ -14,4 +14,15 @@
 
 //singleWhere(bool test(E), E or Else): E      memastikan hanya ada satu data yang sesuai kondisi test, 
                                                 //jika tidak ada, maka hasilnya data orElse   
-                                                //jika lebih dari satu, makan akan throw error                           
+                                                //jika lebih dari satu, makan akan throw error       
+                                                
+//skip(count):Iterable<E>                 membuat iterable baru dengan menghapus data diawal sejumlah count
+
+//skipWhile(bool test(E)): Iterable<E>    membuat iterable baru dengan menghapus data diawal selama kondisi test terpenuhi
+
+//take(count): Iterable<E>                membuat iterable baru dengan hanya mengambil sejumlah count diawal
+
+//takeWhile(bool test(E)): Iterable<E>    MEMBUAT iterable baru dengan mengambil data diawal selama kondisi test terpenuhi
+
+//where(bool test(E))                     membuat iterable baru dengan semua dta yang sesuai kondisi test
+                                                            
