@@ -6,7 +6,8 @@
 //jadi singkatnya set mirip dengan list, tetapi melihat semua data yang masuk sama atau tidak
 
 //  #linked hash set
-//saat kita membuat set, implemetasi default dari set sendiri adalah class LinkedHashSet
+//saat kita membuat set,
+//#implemetasi default dari set sendiri adalah class LinkedHashSet
 //seperti terlihat dari namanya, LinkedHashSet menggunakan struktur data double linked list sebagai implementasinya
 //hal ini menjadikan urutan data di set seusai dengan urutan ketika kita memasukan data ke set
 
@@ -24,8 +25,6 @@ void main() {
 
   print(set); //{farel, alvaro, theriono} berarturan
 }
-
-
 
 //IMPLEMENTASI SESUNGGUHNYA dengan double linked list didart
 
@@ -97,7 +96,7 @@ void main() {
 //   dll.displayBackward(); // Output: 3 2 1
 
 //   dll.prepend(0);
-  
+
 //   print('Display Forward after prepending:');
 //   dll.displayForward(); // Output: 0 1 2 3
 // }

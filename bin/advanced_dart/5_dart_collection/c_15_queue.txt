@@ -1,0 +1,18 @@
+queue
+
+//adalah collection implementasi dari struktu data Stack (tumpukan) 
+//atau queue(antrian)
+
+//queue mirip seperti list, namun yang membedakan, 
+//pada queue, data bisa dialkukan modif di depan (head)
+//atau dibelakang (Tail)
+
+//Stack adalah struktur data yang mengikuti prinsip LIFO (Last In, First Out), 
+//di mana elemen terakhir yang ditambahkan adalah elemen pertama yang diambil
+
+//Queue adalah struktur data yang mengikuti prinsip FIFO (First In, First Out),
+//di mana elemen pertama yang ditambahkan adalah elemen pertama yang diambil.
+
+//kalau di bhs pemograman biasa dipisah stack n queue
+//tpi di dart digabung di collection queue
+
