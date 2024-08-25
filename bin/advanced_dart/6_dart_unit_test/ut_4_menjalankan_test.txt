@@ -1,0 +1,10 @@
+Untuk menjalankan file test, kita bisa menggunakan perintah :
+dart test test/namafile_test.dart
+
+Atau jika kita ingin menjalankan semua unit file unit test, kita bisa gunakan perintah :
+dart test
+Secara otomatis dart akan menjalankan semua unit test di folder test
+
+atau bisa langsung di samping kodenya (jika pakai vscode)
+disamping kode ada tanda segitiga (play) untuk test codenya
+
