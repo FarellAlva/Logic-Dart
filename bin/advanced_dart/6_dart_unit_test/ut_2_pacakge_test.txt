@@ -1,2 +1,12 @@
-https://pub.dev/packages/test
+https://pub.dev/packages/test  {versi saat note ini dibuat 1.25.8}
 
+Dart memiliki package khusus untuk membuat unit test, yaitu package test
+Sebelum kita membuat unit test, kita perlu menambahkan package test terlebih dahulu ke project dart kita
+
+Setelah itu, tambahkan ke dev_dependeciesnya 
+
+``dart
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.23.8
+``
