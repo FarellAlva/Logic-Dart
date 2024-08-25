@@ -8,7 +8,7 @@ Sama seperti ketika membuat aplikasi,
 saat membuat file unit test, kita juga perlu menambahkan main function di file test tersebut
 
 
-jadi nanti folder unit test kita akan disimpan disitu
+jadi nanti folder unit test kita akan disimpan disitu  (berderet sejajar dengan bin)
 
 //////////////////////////
 //setelah membuat folder//
