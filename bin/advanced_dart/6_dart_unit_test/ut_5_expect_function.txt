@@ -1,0 +1,21 @@
+Saat kita membuat unit test, salah satu yang paling penting adalah memastikan apakah data yang kita test benar atau salah
+Hal ini disebut assertion
+
+Di dart, untuk melakukan assertion, kita bisa menggunakan #function expect, 
+dimana terdapat dua parameter, pertama adalah data yang akan di test, dan kedua adalah harapan datanya 
+Jika ternyata data tidak sesuai yang diharapkan, maka secara otomatis akan terjadi error yang menyebabkan unit test dianggap gagal
+
+``dart
+import 'package:test/test.dart';
+
+sayHello(String name) {
+  return 'hi kamu $name';
+}
+
+void main() {
+  test('test say hello', () {
+    var response = sayHello('dart');
+    expect(response, "hi kamu darta");
+  });
+}
+``dart 
