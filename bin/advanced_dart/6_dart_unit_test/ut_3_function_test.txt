@@ -1,0 +1,31 @@
+Dart memiliki standarisasi untuk struktur folder pembuatan unit test,
+biasanya dibuat menggunakan nama folder test
+
+Selanjutnya nama file dart biasanya akan memiliki akhiran _test, 
+misal contoh_test.dart
+
+Sama seperti ketika membuat aplikasi, 
+saat membuat file unit test, kita juga perlu menambahkan main function di file test tersebut
+
+
+jadi nanti folder unit test kita akan disimpan disitu
+
+//////////////////////////
+//setelah membuat folder//
+//////////////////////////
+
+Untuk membuat unit test, kita bisa menggunakan function test yang terdapat di package test
+test function tersebut memiliki parameter nama function 
+dan juga anonymous function yang berisikan kode unit test nya
+
+``dart
+import 'package:test/test.dart';
+
+void main() {
+  test("Contoh test", () => 'isiunit');
+
+  test("Contoh test2", () { //isi unit
+    return 0; 
+  });
+}
+``
