@@ -1,16 +1,17 @@
  ## Pengenalan Software Testing
 
-Software testing adalah salah satu disiplin ilmu dalam software engineering
-Tujuan utama dari software testing adalah memastikan kualitas kode dan aplikasi kita baik
-Ilmu untuk software testing sendiri sangatlah luas, pada materi ini kita hanya akan fokus ke unit testing
+- Software testing adalah salah satu disiplin -ilmu dalam software engineering
+- Tujuan utama dari software testing adalah memastikan kualitas kode dan aplikasi kita 
+baik
+- Ilmu untuk software testing sendiri sangatlah luas, pada materi ini kita hanya akan fokus ke unit testing
 
  ## Test pyramid 
 
-#slow                       #expensive
-   ^      /  UI_(E2E)  \        ^
-   |     / service_test \       |
-   |    /    unit_test   \      |
-#fast                         #cheap
+- #slow                       #expensive
+-   ^      /  UI_(E2E)  \        ^
+-   |     / service_test \       |
+-   |    /    unit_test   \      |
+- #fast                         #cheap
 
 1. UI E2E Test: Pengujian alur kerja lengkap dari perspektif pengguna, mencakup semua lapisan aplikasi dari UI hingga backend.
 
@@ -22,35 +23,35 @@ Ilmu untuk software testing sendiri sangatlah luas, pada materi ini kita hanya a
  ## Contoh high level architecture aplikasi
 
 
-   user --> Frontend
-               /\
-              /  \
-      backend A   backend B __
-          |          |        \
-      Database     Database  Other system
+-   user --> Frontend
+-               /\
+-              /  \
+-      backend A   backend B __
+-          |          |        \
+-      Database     Database  Other system
 
-Scope: 
+- Scope: 
 
-UI test /E2E test : semua bagian harus berjalan
+- UI test /E2E test : semua bagian harus berjalan
 
-Service test : integration test di backend (ex: integration test 2 database yaitu integration A dan inegration B)
+-Service test : integration test di backend (ex: integration test 2 database yaitu integration A dan inegration B)
 
-Unit test : lebih ke pengujian terkecil
-contoh unit test:  (internal Architecture aplikasi)
- di backend
-             backend A
-             __________
-Client -->  |Controller|  layer-layernya
-            |    |     |
-            | services |
-            |    |     |
-            |repostiory|-----> Database A
-            |__________|
+- Unit test : lebih ke pengujian terkecil
+- contoh unit test:  (internal Architecture aplikasi)
+- di backend
+-              backend A
+-              __________
+- Client -->  |Controller|  layer-layernya
+-             |    |     |
+-             | services |
+-             |    |     |
+-             |repostiory|-----> Database A
+-             |__________|
 
-//unit test mengetest untuk setiap layer jadi tidak butuh backend aslinya, bisa dibuat dengan mock/stub buat2an:
--unit test Controller
--unit test service
--unit test repostiory
+- //unit test mengetest untuk setiap layer jadi tidak butuh backend aslinya, bisa dibuat dengan mock/stub buat2an:
+- unit test Controller
+- unit test service
+- unit test repostiory
 
 ## Unit Test
 
