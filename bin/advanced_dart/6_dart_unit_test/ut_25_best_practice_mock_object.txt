@@ -1,0 +1,7 @@
+Testing menggunakan real object lebih baik dibandingkan menggunakan mock object
+Selama kita bisa membuat real objectnya, 
+selalu gunakan real object, dibandingkan menggunakan mock object
+Gunakan mock object, hanya ketika kita tidak bisa membuat real object nya di unit test (payment gateway misalnya)
+
+Jika menggunakan mock object, pastikan selalu melakukan verifikasi interaksi yang 
+terjadi terhadap mock object tersebut
