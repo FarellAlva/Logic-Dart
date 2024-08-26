@@ -92,10 +92,11 @@ Template ini mirip dengan web tetapi lebih sederhana. Sangat cocok untuk proyek 
 ```dart
 dart create --template=web-simple my_simple_web_app
 ```
-<details>
-  <summary>dev slide</summary>
-
-  Slide: 
-https://docs.google.com/presentation/d/14alNH1UvC5wlNdY4p6VS3pL8lZMvobU3fr-NqAwaepk/edit#slide=id.p
+<button onclick="document.getElementById('hidden-text').style.display='block'">
+  dev slide
+</button>
+<div id="hidden-text" style="display:none;">
+  [This content is hidden.](https://docs.google.com/presentation/d/14alNH1UvC5wlNdY4p6VS3pL8lZMvobU3fr-NqAwaepk/edit#slide=id.p)
+</div>
 
 
