@@ -4,6 +4,8 @@ maka seluruh unit test di file tersebut akan menggunakan platform selector yang 
 Kadang, kita hanya ingin beberapa test function atau group function saja misalnya, 
 pada kasus ini kita bisa menambahkan parameter testOn
 
+#menggunakan named parameter
+
   ```dart
   @TestOn("mac-os || windows ") // global
 import 'package:test/test.dart';
