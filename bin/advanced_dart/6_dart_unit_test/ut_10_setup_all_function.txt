@@ -1,0 +1,40 @@
+Jika setUp function akan dieksekusi di awal sebelum tiap test function di eksekusi
+setUpAll function hanya dieksekusi sekali saja, 
+di awal sebelum semua test function di eksekusi
+
+Jika setUpAll function di tempatkan di dalam group function, 
+maka setUpAll function ini hanya berlaku untuk test function di dalam group function tersebut
+
+use case nya ketika kita ingin membuka koneksi ke database sekali saja saat diawal
+supaya tidak dibuka disetiap test function 
+
+
+contoh 
+```dart
+import 'package:test/test.dart';
+
+void main() {
+  var data = 'testingg';
+
+  setUpAll(() => print('start unit testing')); //akan diprint start testing
+  setUp(() {
+    data = 'setUp';
+    print(data);
+  });
+  tearDown(() => print(data));
+  group('test string', () {
+    // tearDown(() => print(data));
+    test('string first', () {
+      //data = 'setUp';
+      data = '$data test1';
+      expect(data, 'setUp test1');
+    });
+
+    test('string second', () {
+      //data = 'setUp';
+      data = '$data test2';
+      expect(data, 'setUp test2');
+    });
+  });
+}
+```
