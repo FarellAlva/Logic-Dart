@@ -1,0 +1,48 @@
+Pada beberapa kasus, mungkin kita membuat kode Dart yang dikhususkan untuk platform tertentu, 
+misal untuk sistem operasi tertentu misalnya
+
+Kita bisa menandai sebuah unit test dengan annotation @TestOn, 
+untuk memberi tahu bahwa unit test ini untuk platform yang kita sebutkan,
+
+sehingga jika kita menjalankan unit test tersebut di platform yang berbeda,
+secara otomatis unit test tersebut akan di skip
+Platform selector mendukung operator boolean, seperti &&, || dan !
+
+Daftar platform: 
+
+vm: test di command line Dart VM
+chrome: test di browser Chrome
+firefox: test di browser Firefox
+safari: test di browser Safari
+ie: test di browser Internet Explorer
+node: test di NodeJS
+browser: test di browser apapun
+js: test telah di compile ke JavaScript
+
+blink: test di browser yang memiliki blinkn render engine
+windows: test di os Windows
+mac-os: test di os Mac
+linux: test di os Linux
+android: test di os Android
+ios: test di os iOS
+posix: test di os POSIX
+
+```dart
+@TestOn("mac-os ") // Harus berada di bagian paling atas file
+
+import 'package:test/test.dart';
+
+int sum(int a, int b) => a + b;
+
+void main() {
+  group('test sum', () {
+    test('positif', () {
+      expect(sum(1, 2), 3);
+    });
+
+    test('negatif', () {
+      expect(sum(2, -3), -1);
+    });
+  });
+}
+```
