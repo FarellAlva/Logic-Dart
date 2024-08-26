@@ -1,0 +1,41 @@
+Jika setUp function adalah function yang selalu dieksekusi di awal unit test, 
+maka tearDown adalah function yang selalu dieksekusi di akhir unit test
+
+Cocok untuk melakukan hal yang harus dilakukan setelah semua unit test berjalan
+
+Jika tearDown function di tempatkan di dalam group function, 
+maka tearDown function ini hanya berlaku untuk test function di dalam group function tersebut
+
+use casenya untuk unit test konek ke database, dengan begitu kita bisa close koneksi databasenya
+
+
+contoh: 
+
+```dart
+import 'package:test/test.dart';
+
+void main() {
+  var data = 'testingg';
+
+  setUp(() {
+    data = 'setUp';
+    print(data);
+  });
+
+  group('test string', () {
+    test('string first', () {
+      //data = 'setUp';
+      data = '$data test1';
+      expect(data, 'setUp test1');
+    });
+
+    test('string second', () {
+      //data = 'setUp'; dari pada
+      data = '$data test2';
+      expect(data, 'setUp test2');
+    });
+  });
+
+   tearDown(() => print(data)); //akan selalu dieksekusi di akhir testing
+}
+```
