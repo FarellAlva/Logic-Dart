@@ -1,0 +1,63 @@
+Saat kita membuat unit test menggunakan Mock Object, 
+yang perlu diperhatikan adalah, kita harus bisa memastikan bahwa Mock Object 
+tersebut benar-benar dipanggil, karena jika tidak, resikonya unit test kita menjadi tidak valid
+Contoh, misal kita hapus kode yang memanggil BookRepository di BookService, 
+dan lihat apa yang terjadi
+
+misalnya di bookservice kita hapus:
+```dart
+import 'package:dart_unit_test/src/book_repository.dart';
+import 'package:dart_unit_test/src/book.dart';
+
+class BookService {
+  BookRepository bookRepository;
+
+  BookService(this.bookRepository);
+
+  void save(String id, String name, int price) {
+    if (id == "" || name == "" || price <= 0) {
+      throw Exception('invalid data');
+    }
+   //bookRepository.save(Book(id, name, price));  //menghapus ini
+   }
+```
+
+maka ketika di run lagi test di mocknya, akan berhasil padahal itu tidak benar2 tersimpan di service
+yang nanti akan diteruskan kepada repository
+
+Walaupun kode BookRepository sudah dihapus, namun unit test tetap sukses,
+hal ini dikarenakan kita tidak melakukan verifikasi apapun pada unit test nya
+Oleh karena itu, ketika menggunakan Mock Object, 
+biasakan kita selalu melakukan verifikasi interaksi yang terjadi
+Kita bisa menggunakan function verify untuk memastikan bahwa Mock Object dipanggil
+
+```dart
+...
+   test('save new book must success', () {
+      bookService.save("1", "tutorial dart", 100000);
+      verify(bookRepository.save(Book("1", 'tutorial dart', 100000))); //tambahkan verify untuk memastikan apa yang akan terjadi
+    });
+  });
+}
+```
+
+
+######### called function
+
+Selain melakukan verifikasi terhadap mock object, 
+kita juga wajib memastikan jumlah eksekusi kode mock object
+Misal, saat save data Book, kita harus pastikan bahwa, 
+BookRepository.save() hanya dipanggil satu kali
+
+```dart
+...
+   test('save new book must success', () {
+      bookService.save("1", "tutorial dart", 100000);
+      verify(bookRepository.save(Book("1", 'tutorial dart', 100000))).called(1); //dipastikan dipanggil satu kali  
+    });
+  });
+}
+```
+
+
+
