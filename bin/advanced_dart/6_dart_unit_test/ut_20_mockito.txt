@@ -1,0 +1,23 @@
+Dart sudah menyediakan package khusus untuk membuat mock object yaitu Mockito
+https://pub.dev/packages/mockito 
+Mockito merupakan package yang terinspirasi dari library 
+mock object Java dengan nama sama, yaitu Mockito https://github.com/mockito/mockito 
+
+
+## menginstal mockito
+
+Sebelum kita menggunakan Mockito, silahkan tambahkan package mockito terlebih dahulu
+Selain itu, mockito juga membutuhkan package build_runner, 
+jadi pastikan kita menambahkan package build_runner juga
+https://pub.dev/packages/build_runner 
+
+```yaml
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.25.7
+  mockito: ^5.4.4
+  build_runner: ^2.4.9 
+```
+
+    
+  
