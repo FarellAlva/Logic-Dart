@@ -1,0 +1,17 @@
+Mockito juga mendukung Matcher ketika membuat stubing atau melakukan verifikasi
+Kita bisa menggunakan constant any jika ingin menerima argument apapun, 
+atau bisa menggunakan argThat(matcher) jika ingin menggunakan matcher
+
+```dart
+    test('find by di test123', () {
+      when(bookRepository.findByid(argThat(startsWith("test"))))
+          .thenReturn(Book('test123', "tutorial dart", 100000));
+
+      var book = bookService.find('test');
+      expect(book, equals(Book("test123", "tutorial dart", 100000)));
+      verify(bookRepository.findByid(any)).called(1);
+    });
+  });
+}
+
+```
