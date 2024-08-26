@@ -1,0 +1,23 @@
+Saat menggunakan annotation @TestOn, 
+maka seluruh unit test di file tersebut akan menggunakan platform selector yang sudah ditentukan
+
+Kadang, kita hanya ingin beberapa test function atau group function saja misalnya, 
+pada kasus ini kita bisa menambahkan parameter testOn
+
+  ```dart
+  @TestOn("mac-os || windows ") // global
+import 'package:test/test.dart';
+
+int sum(int a, int b) => a + b;
+
+void main() {
+  group('test sum', () {
+    test('positif', () {
+      expect(sum(1, 2), 3);
+    }, testOn: 'windows' ); //ini berarti test yang hanya dijalankan di windws
+
+    test('negatif', () {
+      expect(sum(2, -3), -1);
+    });
+  });
+}
