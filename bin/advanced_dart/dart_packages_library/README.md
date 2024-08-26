@@ -92,11 +92,7 @@ Template ini mirip dengan web tetapi lebih sederhana. Sangat cocok untuk proyek 
 ```dart
 dart create --template=web-simple my_simple_web_app
 ```
-<button onclick="document.getElementById('hidden-text').style.display='block'">
-  dev slide
-</button>
-<div id="hidden-text" style="display:none;">
-  [This content is hidden.](https://docs.google.com/presentation/d/14alNH1UvC5wlNdY4p6VS3pL8lZMvobU3fr-NqAwaepk/edit#slide=id.p)
-</div>
-
-
+<details>
+  <summary>Link</summary>
+ https://docs.google.com/presentation/d/14alNH1UvC5wlNdY4p6VS3pL8lZMvobU3fr-NqAwaepk/edit?usp=sharing (note: slide 40 to make apk file)
+</details>
