@@ -9,7 +9,7 @@ For general information about developing packages, see the Dart guide for
 [creating packages](https://dart.dev/guides/libraries/create-library-packages)
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+--> 
 
 ## Step by step command
 
@@ -92,6 +92,7 @@ Template ini mirip dengan web tetapi lebih sederhana. Sangat cocok untuk proyek 
 ```dart
 dart create --template=web-simple my_simple_web_app
 ```
-
+Slide: 
+https://docs.google.com/presentation/d/14alNH1UvC5wlNdY4p6VS3pL8lZMvobU3fr-NqAwaepk/edit#slide=id.p
 
 
