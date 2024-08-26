@@ -1,0 +1,28 @@
+Stubing adalah mengubah tingkah laku mock object sebelum digunakan
+Saat kita membuat mock object, kadang beberapa function butuh mengembalikan value misalnya
+
+Kita bisa menambahkan tingkah laku ke mock object ketika mock object tersebut dipanggil,
+dengan menggunakan when function
+
+Selanjutnya, kita bisa menentukan reaksi apa yang perlu dilakukan oleh mock stub tersebut 
+dengan menggunakan thenReturn, thenAnswer atau thenThrow function
+
+```dart
+
+    test("find book by id NOT found test", () {
+      expect(() {
+        bookService.find('1');
+      }, throwsException);
+    });
+
+    test('find book by id success', () {
+      when(bookRepository.findByid('1'))
+          .thenReturn(Book('1', "tutorial dart", 100000));
+
+      var book = bookService.find('1');
+      expect(book, equals(Book("1", "tutorial dart", 100000)));
+      verify(bookRepository.findByid("1")).called(1);
+    });
+  });
+}
+```
