@@ -1,0 +1,32 @@
+setUp function merupakan sebuah function yang bisa kita gunakan untuk meregistrasi kode yang 
+selalu dieksekusi setiap kalo test function di eksekusi
+
+setUp function cocok sekali ketika kita butuh membuat sebuah kode yang berulang di awal test function
+
+Jika setUp function di tempatkan di dalam group function, 
+maka setUp function ini hanya berlaku untuk test function di dalam group function tersebut
+
+contoh: 
+
+```dart
+import 'package:test/test.dart';
+
+void main() {
+  var data = 'testingg';
+
+  setUp(() => data = 'setUp'); //seperti ini
+
+  group('test string', () {
+    test('string first', () {
+      //data = 'setUp'; dari pada di inisialisasikan terus, lebih baik buat setUp functionnya
+      data = '$data test1';
+      expect(data, 'setUp test1');
+    });
+
+    test('string first', () {
+      //data = 'setUp'; dari pada di inisialisasikan terus, lebih baik buat setUp functionnya
+      data = '$data test2';
+      expect(data, 'setUp test2');
+    });
+  });
+}
