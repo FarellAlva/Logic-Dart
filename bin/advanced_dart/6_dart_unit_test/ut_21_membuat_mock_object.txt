@@ -1,0 +1,45 @@
+Cara kerja Mockito adalah dengan membuat generated file berisi 
+mock class yang bisa kita gunakan sebagai pengganti class aslinya
+
+Pertama, kita perlu memberitahu Mockito untuk membuat mock object dengan 
+menggunakan annotation GenerateNiceMocks,
+dan lakukan import ke file dengan format namafile_test.mocks.dart
+
+Selanjutnya, kita perlu menjalankan build_runner, 
+agar file mock otomatis dibuatkan oleh Mockito 
+/////////////////////////////
+
+jadi setelah membuat file mock_object_test.dart
+masukan kode seperti ini misalnya: 
+
+```dart
+import 'package:mockito/annotations.dart';
+import 'package:test/test.dart';
+
+@GenerateNiceMocks([MockSpec<BookRepository>()])  //BookRepository disesuaiakn dengan file yang kita ingin buatkan mock
+import "mock_object_test.mocks.dart";  //buat file mock dengan format <nama>_test.mocks.dart
+```
+
+>>dart run build_runner build
+//akan mengenerate mock file
+
+lalu bisa dicoba mock filenya dengan:
+```dart
+import 'package:dart_unit_test/book.dart';
+import 'package:mockito/annotations.dart';
+import 'package:test/test.dart';
+
+@GenerateNiceMocks([MockSpec<BookRepository>()])
+import "mock_object_test.mocks.dart";
+
+void main() {
+  group("BookService", () {
+    var bookRepository = MockBookRepository();  //sesuaikan Mock<namafile>
+    var bookService = BookService(bookRepository);
+
+    test('save new book must success', () {
+      bookService.save("1", "tutorial dart", 100000);       
+    });
+  });
+}
+```
