@@ -1,0 +1,30 @@
+Saat membuat unit test yang banyak, kadang kita ingin menambahkan tag terhadap unit test nya
+
+Biasanya ini digunakan sebagai penanda untuk tag
+Kita bisa menggunakan annotation @Tags, 
+atau menggunakan named parameter tags di test atau group function
+
+Salah satu keuntungan menambahkan tag, 
+kita bisa meminta Dart untuk menjalankan unit test dengan tag tertentu saja misalnya, 
+dengan perintah :
+dart test --tags “tag dengan boolean selector”
+
+```dart
+@Tags(['farell', 'alva'])
+
+import 'package:test/test.dart';
+
+void main() {
+  test("Contoh test", () {
+    print('tag1');
+  }, tags: ['tag1']);
+
+  test("Contoh test2", () {
+    print('tag2');
+  }, tags: ['tag2']);
+}
+```
+
+command terminalnya
+ dart test --tags 'farell || alva' berarti atau (mencakup keduanya)
+
