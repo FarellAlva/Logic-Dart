@@ -21,8 +21,10 @@ void main() {
     data = 'setUp';
     print(data);
   });
-
+  tearDown(() => print(data)); //akan selalu dieksekusi di akhir testing
+  
   group('test string', () {
+    // tearDown(() => print(data)); //bisa di taruh di grup tertentu jika mau berlaku disini saja
     test('string first', () {
       //data = 'setUp';
       data = '$data test1';
@@ -30,12 +32,13 @@ void main() {
     });
 
     test('string second', () {
-      //data = 'setUp'; dari pada
+      //data = 'setUp'; 
       data = '$data test2';
       expect(data, 'setUp test2');
     });
   });
 
-   tearDown(() => print(data)); //akan selalu dieksekusi di akhir testing
+
 }
+
 ```
