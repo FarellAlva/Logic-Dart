@@ -18,7 +18,7 @@ void main() {
       //kalau di declare, maka value akan tetap stay di block scope nilainya
 
       test = 'test2';
-      //kalau di assign, maka value akan menimpa variable keseluruhan
+      //kalau di assign, maka mengubah nilai di scope saja
 
       if (test == 'test2') {
         // test = 'test22';
@@ -40,3 +40,4 @@ void main() {
   print('global scope $okay');
   testScope2();
 }
+//sejatinya tipe jenis-jenis variable di dart hanya memiliki sifat stay di block saja
